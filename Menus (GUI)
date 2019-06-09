@@ -1,0 +1,78 @@
+from Tkinter import *
+root=Tk()
+def doNothing():
+    filewn=Toplevel(root)
+    button=Button(filewn,text="Do Nothing Button")
+    button.pack()
+    
+def ClickOpen():
+    print "Open"
+
+def Close():
+    root.destroy()   
+
+menubar=Menu(root)
+
+#File
+
+filemenu=Menu(menubar)
+filemenu.add_command(label='New',command=doNothing)
+filemenu.add_command(label='Open',command=ClickOpen)
+filemenu.add_command(label='Save',command=ClickOpen)
+filemenu.add_command(label='Save As',command=ClickOpen)
+filemenu.add_separator()
+filemenu.add_command(label='Page Steup',command=ClickOpen)
+filemenu.add_command(label='Print...',command=ClickOpen)
+filemenu.add_separator()
+filemenu.add_command(label='Exit',command=Close)
+menubar.add_cascade(label='File',menu=filemenu)
+#Sub
+Sub=Menu(filemenu)
+Sub.add_command(label='xyz',command=doNothing)
+Sub.add_command(label='PQR',command=doNothing)
+filemenu.add_cascade(label='Recent Files',menu=Sub)
+
+
+#EDIT
+editmenu=Menu(menubar)
+editmenu.add_command(label='Undo',command=doNothing)
+editmenu.add_command(label='Redo',command=doNothing)
+editmenu.add_separator()
+editmenu.add_command(label='Cut',command=doNothing)
+editmenu.add_command(label='Copy',command=doNothing)
+editmenu.add_command(label='Paste',command=doNothing)
+editmenu.add_command(label='Delete',command=doNothing)
+editmenu.add_separator()
+editmenu.add_command(label='Find',command=doNothing)
+editmenu.add_command(label='Find next',command=doNothing)
+editmenu.add_command(label='Replace',command=doNothing)
+editmenu.add_command(label='Goto',command=doNothing)
+editmenu.add_separator()
+editmenu.add_command(label='Select all',command=doNothing)
+editmenu.add_command(label='Time/',command=doNothing)
+
+menubar.add_cascade(label='Edit',menu=editmenu)
+
+#Format
+formatmenu=Menu(menubar)
+menubar.add_cascade(label='Format',menu=formatmenu)
+formatmenu.add_command(label='Word Wrap',command=doNothing)
+formatmenu.add_command(label='Font...',command=doNothing)
+
+
+
+#View
+Viewmenu=Menu(menubar)
+menubar.add_cascade(label='View',menu=Viewmenu)
+Viewmenu.add_command(label='Statusbar',command=doNothing)
+
+#HELP
+Helpmenu=Menu(menubar)
+menubar.add_cascade(label='Help',menu=Helpmenu)
+Helpmenu.add_command(label='View Help',command=doNothing)
+Helpmenu.add_separator()
+Helpmenu.add_command(label='About menus',command=doNothing)
+
+
+root.config(menu=menubar)
+root.mainloop()
