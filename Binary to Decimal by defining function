@@ -1,0 +1,17 @@
+def binaryToDecimal():
+    x=str(input("Enter a binary number: "))
+    y=0
+    sum=0
+    for i in range(len(x)-1,-1,-1):
+        sum=sum+int(x[i])*pow(2,y)
+        y=y+1
+    print("Decimal Conversion of %s is % d "%(x,sum))
+    return sum
+
+
+binaryToDecimal()
+
+        
+
+        
+        
