@@ -1,0 +1,6 @@
+# Print the max of three numbers
+def max(x,y,z):
+	if x > y and y > z :
+		print ("X is maximum")
+	else :
+                print ("Y is Maximum")
