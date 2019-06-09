@@ -1,0 +1,18 @@
+from Tkinter import *
+root=None
+count=0
+def Buttoncreate(r,s):
+    global count
+    txt="Button"+str(count)+""+s
+    bt=Button(r,text=txt)
+    bt.pack(side=s)
+    
+    count += 1
+
+def main():
+    root=Tk()
+    for i in range(5):
+        Buttoncreate(root,BOTTOM)
+    root.mainloop()
+
+main()         
