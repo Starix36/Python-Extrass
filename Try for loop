@@ -1,0 +1,10 @@
+
+a = ['Mary', 'had', 'a', 'little', 'lamb']
+str="length of a is :"+str(len(a))
+print str
+for i in range(len(a)):
+    print(i, a[i])
+    
+for i in range(1,11):
+    print 2*i,"\t",3*i,"\t",4*i,"\t",5*i
+    
