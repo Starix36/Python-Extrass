@@ -1,0 +1,31 @@
+
+from Tkinter import *
+root=None
+count=0
+def Buttonclick():
+    global count
+    global mytxt
+    count += 1
+    mytxt.set("You have clicked %d times"%count)
+    
+    
+  
+def LabelTextbox(x):
+    global mytxt
+    mytxt=StringVar()
+    mytxt.set('')
+    tBox=Label(x,textvariable=mytxt)
+    tBox.pack()
+   
+def main():
+    
+    root=Tk()
+##    W=Label(root,text='Hello!,World')
+##    W.pack()
+##    a=Label(root,textvariable=mytxt)
+    buttons=Button(root,text="Show text",command=Buttonclick)
+    buttons.pack()
+    LabelTextbox(root)
+    root.mainloop()
+
+main()
