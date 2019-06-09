@@ -1,0 +1,6 @@
+from math import *
+r=(input("Radius of the circle is\n"))
+
+V = 4/3*(pi*r**3)
+
+print("The volume of the sphere is",V)
