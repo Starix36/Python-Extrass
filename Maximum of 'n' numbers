@@ -1,0 +1,42 @@
+
+def maxii_nums():
+    #from math import *
+    def value_check(value,i):
+        try:
+            value=float(value)
+            return value,i
+        except ValueError:
+            i=i-1
+            print ("Enter only numbers")
+            return value,i
+            
+
+    mx=[]
+    #value=""
+    
+    value=0
+    i=0
+    while True:
+        num=(input("Enter for how many numbers you wants to calculate maximum: "))
+        value,i=value_check(num,i)
+        if (type(value)==float):
+            break
+        elif i>num:
+            break
+
+            
+    i=0
+    num=value
+    while i<num:
+        value=(input("Enter a value"))
+        value,i=value_check(value,i)
+        print (i)
+        if (type(value)==float):
+            mx.append(value)
+        i=i+1
+    print ("Maximum number is: ",max(mx))
+
+
+
+     
+maxii_nums()        
