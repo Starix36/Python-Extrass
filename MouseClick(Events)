@@ -1,0 +1,23 @@
+from Tkinter import *
+
+def mouseKey(x):
+    print "You have Pressed ",x.char
+
+def mouseEntered(x):
+    button=x.widget
+    button.config(text='Click me')
+def mouseExit(e):
+    button=e.widget
+    button.config(text='Logon')
+
+def main():
+    global root
+    root=Tk()
+    b=Button(root,text='Logon')
+    b.bind("<Enter>",mouseEntered)
+    b.bind("<Leave>",mouseExit)
+    root.bind("<Key>",mouseKey)
+    b.pack()
+    root.mainloop()
+
+main()
