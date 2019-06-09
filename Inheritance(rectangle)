@@ -1,0 +1,24 @@
+class Polygon:
+    def __init__(self,no_of_sides):
+        self.n=no_of_sides
+        self.sides =(input("Enter the sides"))
+    def inputside(self):
+        self.sides=[float(input("Enter sides "+str(i+1)+":"))for i in range(self.n)]
+    
+            
+class Square(Polygon):
+    def __init__(self):
+        Polygon.__init_(self,1)
+        
+    def findArea(self):
+       
+       a=self.sides
+       area=pow(a,2)
+       print('The area of square',area)
+
+t=Square()
+t.inputside()
+t.findArea()
+
+
+
