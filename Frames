@@ -1,0 +1,17 @@
+from Tkinter import *
+from Tkinter import Frame
+root=Tk()
+x=Frame(root,bg="BLUE")
+y=Frame(root,bg="RED")
+z=Frame(root,bg='BLACK')
+p=Frame(root,bg='GREEN')
+q=Frame(root,bg="YELLOW")
+
+x.pack(side=LEFT,fill=BOTH,expand=True)
+y.pack(side=LEFT,fill=BOTH,expand=True)
+z.pack(side=TOP,fill=BOTH,expand=True)
+p.pack(side=TOP,fill=BOTH,expand=True)
+q.pack(side=TOP,fill=BOTH,expand=True)
+
+##q.pack_propagate(False)
+root.mainloop()
