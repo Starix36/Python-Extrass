@@ -1,0 +1,7 @@
+def sum(a,b=10):
+    "Function having two parameters"
+    c=a+b
+    print c  
+
+sum(10,50)
+sum(5)
