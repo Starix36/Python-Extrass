@@ -1,0 +1,12 @@
+list=['a',0,2]
+for entry in list:
+    try:
+        print("This entry is",entry)
+        r=1/int(entry)
+        break
+    except:
+              print("OOPs!",sys.exc_info()[0],"occured.")
+              print("Next entry.")
+              print()
+
+print("The reciprocal of ",entry," is",r)                      
